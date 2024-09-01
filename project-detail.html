@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xml:lang>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
+<title>
+    Blog
+</title>
+</head>
+<!-- navbar start -->
+<nav class="bg-orange-600 w-full fixed top-0 shadow-md transition-all transform ease-in-out duration-500">
+  <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+    <div class="relative flex h-16 items-center justify-between">
+        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+          <div class="flex flex-shrink-0 items-center">
+            <img class="h-8 w-auto" src="https://dumbways.id/assets/images/brandwhite.png" alt="Your Company">
+          </div>
+          <div class="hidden sm:ml-8 sm:block">
+            <div class="flex space-x-4">
+              <a href="index.html" class="rounded-md px-3 py-2 text-1xl text-white font-medium hover:bg-gray-700">
+                  Home</a>
+              <a href="blog.html" class="rounded-md px-3 py-2 text-1xl text-white font-medium hover:bg-gray-700">Blog</a>
+            </div>
+          </div>
+        </div>
+        <div class="absolute inset-y-0 right-0 flex items-center pr-2 text-white sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+            <a href="contact.html" class="rounded-md px-3 py-2 text-1xl font-medium hover:bg-gray-700">Contact Us</a>
+        </div>  
+    </div>
+</div>
+</nav>
+<!-- navbar end -->
+
+<body>
+    !-- Main Content -->
+    <main class="project-detail">
+      <!-- Project Title -->
+      <div class="header-container">
+        <h1 id="projectTitle">Project Title</h1>
+      </div>
+  
+      <div class="image-and-info">
+        <!-- Project Image -->
+        <img id="projectImage" src="https://via.placeholder.com/200" alt="Project Image">
+  
+        <div class="info-section">
+          <div class="duration-info">
+            <!-- Project Duration -->
+            <p id="projectDuration">Duration: 1 month</p>
+  
+            <!-- Date Range -->
+            <div class="date-range">
+              <i class="fas fa-calendar-alt"></i>
+              <span id="dateRange">12 Jan 2021 - 11 Feb 2021</span>
+            </div>
+  
+            <!-- Duration in Months -->
+            <div class="time-duration">
+              <i class="fas fa-clock"></i>
+              <span id="timeDuration">1 month</span>
+            </div>
+          </div>
+  
+          <!-- Technologies Used -->
+          <section class="technologies">
+            <h2>Technologies Used</h2>
+            <ul id="techList">
+              <!-- Example Technologies -->
+              <li>Node.js</li>
+              <li>React.js</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+  
+  
+      <!-- Project Description -->
+      <section class="description">
+        <h2>Description</h2>
+        <p id="projectDescription">
+          This is where the project description will go. It will contain all the detailed information about the project
+          that the user has inputted.
+        </p>
+      </section>
+    </main>
+    ,<script src="javascript.js"></script>
+</body>
+</html>
