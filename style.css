@@ -190,3 +190,264 @@ h1 {
     text-align: center;
   }
 }
+
+/* Base Styles */
+.navbar {
+  background-color: #ea580c;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease-in-out;
+  z-index: 10;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.logo-container {
+  flex-shrink: 0;
+}
+
+.logo {
+  height: 32px;
+  width: auto;
+}
+
+.menu {
+  display: flex;
+  gap: 16px;
+}
+
+.menu-link {
+  padding: 8px 12px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.menu-link:hover {
+  background-color: #4b5563;
+}
+
+/* Mobile Styles */
+.mobile-menu-button {
+  display: none;
+}
+
+.mobile-menu-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  color: white;
+}
+
+/* Add transition to the mobile menu */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  gap: 8px;
+  position: absolute;
+  top: 64px;
+  left: 0;
+  right: 0;
+  padding: 8px;
+  background-color: #c2410c;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 9;
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.mobile-menu-link {
+  padding: 8px 12px;
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.mobile-menu-link:hover {
+  background-color: #4b5563;
+}
+
+/* Responsive Styles */
+@media (max-width: 640px) {
+  .menu {
+    display: none;
+  }
+
+  .mobile-menu-button {
+    display: block;
+  }
+
+  /* Center the logo on mobile */
+  .navbar-content {
+    justify-content: center;
+  }
+
+  .mobile-menu-button {
+    position: absolute;
+    right: 16px; /* Adjust to align the button to the right edge */
+  }
+}
+
+@media (min-width: 641px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+
+/* Active class for showing the mobile menu with transition */
+.mobile-menu-active {
+  opacity: 1;
+  transform: scaleY(1);
+  display: flex;
+}
+
+.container-card {
+  display: flex;
+  flex-direction: column;
+  padding: 3.5rem 0rem 3.5rem 0rem;
+  background-color: #f8f9fa; /* Ganti dengan kode warna yang sesuai untuk bg-background */
+  border-radius: 0.5rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  margin: 7rem;
+  align-items:center;
+  justify-content:center;
+}
+
+@media (min-width: 768px) {
+  .container-card {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-card {
+    margin: 7rem 3rem;
+    padding: 2rem 1.5rem 2rem 1.5rem;
+    }
+}
+
+.content {
+  max-width: 48rem;
+  padding-right: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding-right: 0;
+    }
+}
+
+.content h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.content p {
+  margin-top: 1rem;
+  text-align: justify;
+}
+
+.button-group {
+  margin-top: 2.5rem;
+}
+
+.button-group a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  margin-right: 0.5rem;
+}
+
+.button-group .contact-btn {
+  background-color: black;
+  color: white;
+  transition: background-color 0.2s;
+}
+
+.button-group .contact-btn:hover {
+  background-color: #4a5568; /* Ganti dengan kode warna yang sesuai untuk bg-secondary/80 */
+}
+
+.button-group .download-btn {
+  background-color: #3182ce; /* Ganti dengan kode warna yang sesuai untuk bg-primary */
+  color: #fff; /* Ganti dengan kode warna yang sesuai untuk text-primary-foreground */
+  transition: background-color 0.2s;
+}
+
+.button-group .download-btn:hover {
+  background-color: #2b6cb0; /* Ganti dengan kode warna yang sesuai untuk bg-primary/80 */
+}
+
+.sharing-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2.5rem;
+}
+
+.sharing-buttons a {
+  border: 2px solid #4a5568; /* Ganti dengan kode warna yang sesuai untuk border-gray-600 */
+  padding: 0.75rem;
+  border-radius: 50%;
+  color: white;
+  background-color: #4a5568;
+  transition: background-color 0.2s, border-color 0.2s;
+  margin-bottom: 0.25rem;
+  margin-right: 0.25rem;
+}
+
+.sharing-buttons a:hover {
+  background-color: #2d3748; /* Ganti dengan kode warna yang sesuai untuk bg-gray-700 */
+  border-color: #2d3748; /* Ganti dengan kode warna yang sesuai untuk border-gray-700 */
+}
+
+.card {
+  width: auto;
+}
+
+@media (max-width: 768px) {
+  .card {
+    margin-top: 10px;
+  }
+}
+
+.card img {
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  margin: 1.25rem;
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+.card p {
+  color: #6c757d; /* Ganti dengan kode warna yang sesuai untuk text-muted-foreground */
+}

@@ -3,89 +3,87 @@
 <head>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="style.css">
-<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-<script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
 <title>
     Home
 </title>
 </head>
+
 <!-- navbar start -->
-<nav class="bg-orange-600 w-full fixed top-0 shadow-md transition-all transform ease-in-out duration-500">
-  <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-    <div class="relative flex h-16 items-center justify-between">
-        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-          <div class="flex flex-shrink-0 items-center">
-            <img class="h-8 w-auto" src="https://dumbways.id/assets/images/brandwhite.png" alt="Your Company">
-          </div>
-          <div class="hidden sm:ml-8 sm:block">
-            <div class="flex space-x-4">
-              <a href="index.html" class="rounded-md px-3 py-2 text-1xl text-white font-medium hover:bg-gray-700">
-                  Home</a>
-              <a href="blog.html" class="rounded-md px-3 py-2 text-1xl text-white font-medium hover:bg-gray-700">Blog</a>
-            </div>
-          </div>
-        </div>
-        <div class="absolute inset-y-0 right-0 flex items-center pr-2 text-white sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            <a href="contact.html" class="rounded-md px-3 py-2 text-1xl font-medium hover:bg-gray-700">Contact Us</a>
-        </div>  
+<nav class="navbar">
+  <div class="container">
+    <div class="navbar-content">
+      <div class="logo-container">
+        <img class="logo" src="https://dumbways.id/assets/images/brandwhite.png" alt="Your Company">
+      </div>
+      <div class="menu">
+        <a href="index.html" class="menu-link">Home</a>
+        <a href="blog.html" class="menu-link">Blog</a>
+        <a href="contact.html" class="menu-link">Contact Form</a>
+      </div>
+      <div class="mobile-menu-button">
+        <button id="menu-toggle" class="mobile-menu-icon">
+          <span class="sr-only">Open main menu</span>
+          <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
     </div>
-</div>
+    <div id="mobile-menu" class="mobile-menu">
+      <a href="index.html" class="mobile-menu-link">Home</a>
+      <a href="blog.html" class="mobile-menu-link">Blog</a>
+      <a href="contact.html" class="mobile-menu-link">Contact Us</a>
+    </div>
+  </div>
 </nav>
-<!-- navbar end -->
 
 <body>        
-      <div class="flex flex-col md:flex-row p-10 bg-background rounded-lg shadow-lg m-20">
-        <div class="md:w-4/6">
-          <h1 class="text-2xl font-bold">Welcome to my personal website!</h1>
-          <p class="mt-4 text-justify">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tristique purus orci libero egestas ut. Augue suspendisse blandit lorem massa ipsum, urna, egestas mi, lacinia. Dui fusce etiam
-            libero, lectus amet, risus molestie malesuada. Odio nam purus consectetur euismod congue leo quisque. Turpis amet sollicitudin nunc non in lectus dolor amet. Amet ullamcorper faucibus tincidunt
-            accumsan ac adipiscing arcu. Donec tristique at proin maecenas. Ante elit et iaculis ac sit.
-          </p>
-          
-          <div class="mt-10">
-            <a href="contact.html" class="bg-black text-white hover:bg-secondary/80 px-4 py-2 rounded-lg mr-2">Contact</a>
-            <a class="bg-primary text-primary-foreground hover:bg-primary/80 px-4 py-2 rounded-lg">Download CV</a>
-          </div>
+  <div class="container-card">
+    <div class="content">
+      <h1>Welcome to my personal website!</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tristique purus orci libero egestas ut. Augue suspendisse blandit lorem massa ipsum, urna, egestas mi, lacinia. Dui fusce etiam
+        libero, lectus amet, risus molestie malesuada. Odio nam purus consectetur euismod congue leo quisque. Turpis amet sollicitudin nunc non in lectus dolor amet. Amet ullamcorper faucibus tincidunt
+        accumsan ac adipiscing arcu. Donec tristique at proin maecenas. Ante elit et iaculis ac sit.
+      </p>
+      
+      <div class="button-group">
+        <a href="contact.html" class="contact-btn">Contact</a>
+        <a class="download-btn">Download CV</a>
+      </div>
+  
+      <!-- social button start -->
+      <div class="sharing-buttons">
+        <ul>
+          <li a href="#">Facebook</li>
+          <li a href="#">Facebook</li>
+          <li a href="#">Facebook</li>
+          <li a href="#">Facebook</li>
+        </ul>
+        <!-- Tambahkan elemen sosial media yang diperlukan di sini -->
+      </div>
+      <!-- social button end -->
+  
+    </div>
+    <div class="card">
+      <img src="img/myphotos.png" alt="Muhammad Taufal" />
+      <h2>Muhammad Taufal</h2>
+      <p>Fullstack Developer</p>
+    </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+  const menuToggleButton = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
 
-        <!-- social button start -->
-        <div class="sharing-buttons flex flex-wrap mt-10">
-            <a class="border-2 duration-200 ease inline-flex items-center mb-1 mr-1 transition p-3 rounded-full text-white border-gray-600 bg-gray-600 hover:bg-gray-700 hover:border-gray-700" target="_blank" rel="noopener" href="https://facebook.com/sharer/sharer.php?u=" aria-label="Share on Facebook">
-            <svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-6 h-6">
-                <title>Facebook</title>
-                <path d="M379 22v75h-44c-36 0-42 17-42 41v54h84l-12 85h-72v217h-88V277h-72v-85h72v-62c0-72 45-112 109-112 31 0 58 3 65 4z">
-                </path>
-            </svg>
-            </a>
-            <a class="border-2 duration-200 ease inline-flex items-center mb-1 mr-1 transition p-3 rounded-full text-white border-gray-600 bg-gray-600 hover:bg-gray-700 hover:border-gray-700" target="_blank" rel="noopener" href="https://twitter.com/intent/tweet?url=&amp;text=" aria-label="Share on Twitter">
-            <svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-6 h-6">
-                <title>Twitter</title>
-                <path d="m459 152 1 13c0 139-106 299-299 299-59 0-115-17-161-47a217 217 0 0 0 156-44c-47-1-85-31-98-72l19 1c10 0 19-1 28-3-48-10-84-52-84-103v-2c14 8 30 13 47 14A105 105 0 0 1 36 67c51 64 129 106 216 110-2-8-2-16-2-24a105 105 0 0 1 181-72c24-4 47-13 67-25-8 24-25 45-46 58 21-3 41-8 60-17-14 21-32 40-53 55z">
-                </path>
-            </svg>
-            </a>
-            <a class="border-2 duration-200 ease inline-flex items-center mb-1 mr-1 transition p-3 rounded-full text-white border-gray-600 bg-gray-600 hover:bg-gray-700 hover:border-gray-700" target="_blank" rel="noopener" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=&amp;title=&amp;summary=&amp;source=" aria-label="Share on Linkedin">
-            <svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-6 h-6">
-                <title>Linkedin</title>
-                <path d="M136 183v283H42V183h94zm6-88c1 27-20 49-53 49-32 0-52-22-52-49 0-28 21-49 53-49s52 21 52 49zm333 208v163h-94V314c0-38-13-64-47-64-26 0-42 18-49 35-2 6-3 14-3 23v158h-94V183h94v41c12-20 34-48 85-48 62 0 108 41 108 127z">
-                </path>
-            </svg>
-            </a>
-            <a class="border-2 duration-200 ease inline-flex items-center mb-1 mr-1 transition p-3 rounded-full text-white border-gray-600 bg-gray-600 hover:bg-gray-700 hover:border-gray-700" target="_blank" rel="noopener" href="https://www.tumblr.com/widgets/share/tool?posttype=link&amp;title=&amp;caption=&amp;content=&amp;canonicalUrl=&amp;shareSource=tumblr_share_button" aria-label="Share on Tumblr" draggable="false">
-            <svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-6 h-6">
-                <title>Tumblr</title>
-                <path d="M406 480c-14 15-50 32-98 32-120 0-147-89-147-141V227h-47c-6 0-10-4-10-10v-68c0-7 4-13 11-16 62-21 82-76 85-117 0-11 6-16 16-16h71c5 0 10 4 10 10v115h83c5 0 10 5 10 10v82c0 5-5 10-10 10h-84v133c0 34 24 54 68 36 5-2 9-3 13-2 3 1 6 3 7 8l22 64c2 5 4 10 0 14z">
-                </path>
-            </svg>
-            </a>
-        </div>
-        <!-- social button end -->
-
-        </div>
-        <div class="card">
-            <img src="img/myphotos.png" alt="Muhammad Taufal" class="rounded-lg shadow-md" />
-            <h2 class="m-5 text-lg font-bold">Muhammad Taufal</h2>
-            <p class="text-muted-foreground">Fullstack Developer</p>
-        </div>
+  menuToggleButton.addEventListener('click', function() {
+    if (mobileMenu.classList.contains('mobile-menu-active')) {
+      mobileMenu.classList.remove('mobile-menu-active');
+    } else {
+      mobileMenu.classList.add('mobile-menu-active');
+    }
+  });
+});
+  </script>
 </body>
 </html>

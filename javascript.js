@@ -1,4 +1,3 @@
-
 // Fungsi untuk mendapatkan data dari local storage
 function getProjectsFromLocalStorage() {
   return JSON.parse(localStorage.getItem('projects')) || [];
